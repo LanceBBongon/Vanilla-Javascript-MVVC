@@ -23,6 +23,10 @@ class UIHandler {
         }
     }
 
+    set docRef(elementId) {
+        this.#initialiseDocRef(elementId);
+    }
+
     // Getter to retrieve the whole static docRef object
     get docRef() {
         return this.constructor.docRef;
