@@ -1,36 +1,57 @@
 class UIHandler {
     static docRef = {};  // Static field shared across all instances
 
-    constructor(elementsName = []) {
-        this.#initializeDocRef(elementsName);
+    constructor(elements = []) {
+        console.log('UIServices UIHandler Loaded');
+        this.docRef = elements; // Use the setter during initialization
     }
 
-    #initializeDocRef(elements) {
-        if (Array.isArray(elements)) {
-            elements.forEach(elementId => this.#addDocRef(elementId)); // Handle each element in the array
-        } else {
-            this.#addDocRef(elements); // Handle a single element
-        }
-    }
-
-    #addDocRef(elementId) {
-        if (!elementId) {
-            console.warn('Invalid element ID provided.');
+    #processElements(elements) {
+        if (!elements || (Array.isArray(elements) && elements.length === 0)) {
+            console.log('UI handler has no objects in it.');
             return;
         }
-        
-        const element = document.getElementById(elementId);
-        if (element) {
-            this.constructor.docRef[elementId] = element;
-            console.log(`Element with ID '${elementId}' has been added.`);
+
+        if (elements instanceof HTMLElement) {
+            this.#addOrUpdateDocRef(elements);
+        } else if (elements instanceof NodeList || Array.isArray(elements)) {
+            elements.forEach(element => this.#addOrUpdateDocRef(element)); // Handle each element
+        } else if (typeof elements === 'string') {
+            this.#addOrUpdateDocRef(elements); // Handle a single element ID
         } else {
-            console.warn(`Element with ID '${elementId}' not found.`);
+            console.warn('Invalid elements provided to initialize.');
         }
     }
 
-    // Setter to add an element to the docRef
-    set docRef(elementId) {
-        this.#initializeDocRef(elementId);
+    #addOrUpdateDocRef(element) {
+        let elementId = null;
+
+        if (!elementId || !element) {
+            console.warn('Invalid element or element ID provided.');
+            return;
+        }
+
+        if (elementId in this.constructor.docRef) {
+            console.log(`Element with ID '${elementId}' already exists in docRef.`);
+            return;
+        }
+
+
+        if (typeof element === 'string') {
+            elementId = element;
+            element = document.getElementById(elementId);
+        } else if (element instanceof HTMLElement) {
+            elementId = element.id;
+        }
+
+
+        this.constructor.docRef[elementId] = element;
+        console.log(`Element with ID '${elementId}' has been added.`);
+    }
+
+    // Setter to add elements to the docRef
+    set docRef(elements) {
+        this.#processElements(elements);
     }
 
     // Getter to retrieve the whole static docRef object
