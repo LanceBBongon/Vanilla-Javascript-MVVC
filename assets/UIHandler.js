@@ -2,10 +2,10 @@ class UIHandler {
     static docRef = {};  // Static field shared across all instances
 
     constructor(elementsName = []) {
-        this.#initialiseDocRef(elementsName);
+        this.#initializeDocRef(elementsName);
     }
 
-    #initialiseDocRef(elements) {
+    #initializeDocRef(elements) {
         if (Array.isArray(elements)) {
             elements.forEach(elementId => this.#addDocRef(elementId)); // Handle each element in the array
         } else {
@@ -14,6 +14,11 @@ class UIHandler {
     }
 
     #addDocRef(elementId) {
+        if (!elementId) {
+            console.warn('Invalid element ID provided.');
+            return;
+        }
+        
         const element = document.getElementById(elementId);
         if (element) {
             this.constructor.docRef[elementId] = element;
@@ -23,8 +28,9 @@ class UIHandler {
         }
     }
 
+    // Setter to add an element to the docRef
     set docRef(elementId) {
-        this.#initialiseDocRef(elementId);
+        this.#initializeDocRef(elementId);
     }
 
     // Getter to retrieve the whole static docRef object
@@ -32,8 +38,8 @@ class UIHandler {
         return this.constructor.docRef;
     }
 
-    // Setter to remove an element by its ID from static docRef
-    set removeDocRef(elementId) {
+    // Method to remove an element by its ID from static docRef
+    removeDocRef(elementId) {
         if (elementId in this.constructor.docRef) {
             delete this.constructor.docRef[elementId];
             console.log(`Element with ID '${elementId}' has been removed.`);
