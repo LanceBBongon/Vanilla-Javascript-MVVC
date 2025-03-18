@@ -7,8 +7,11 @@
 I heard that javascript doesn't have a lot of scalability on the front-end side of things. Thats my initial impression.
 
 I remember and came across MVC and that can organise the code into a managable chunk leading me to two articles.
-** One is from: https://hackernoon.com/writing-a-simple-mvc-model-view-controller-app-in-vanilla-javascript-u65i34lx by Eleazar Meza, 2020 and 
-the other is from Tania Rasca, 2020 https://www.taniarascia.com/javascript-mvc-todo-app/ 
+
+One is from: https://hackernoon.com/writing-a-simple-mvc-model-view-controller-app-in-vanilla-javascript-u65i34lx by Eleazar Meza, 2020.
+
+The other is from https://www.taniarascia.com/javascript-mvc-todo-app/ by Tania Rasca, 2020.
+
 I found both piece to be inspiring and have greatfully contributed to my knowledge which I am greatful for. Thank you Eleazar Meza and Tania Rasca.
 
 However those piece of information are from from ideal to what I was looking for, and have found my self having a lot of document.getElement by ID on two pieces of MVC having duplicate 
