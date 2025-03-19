@@ -1,32 +1,31 @@
-﻿# Vanilla-Javascript-MVVC
-
 # Vanilla-Javascript-MVVC
 
-
-
-I heard that javascript doesn't have a lot of scalability on the front-end side of things. Thats my initial impression.
+I heard that javascript doesn't have a lot of scalability.
 
 I remember and came across MVC and that can organise the code into a managable chunk leading me to two articles.
 
-&nbsp; One is from: https://hackernoon.com/writing-a-simple-mvc-model-view-controller-app-in-vanilla-javascript-u65i34lx by Eleazar Meza, 2020.
+&nbsp; - One is from: https://hackernoon.com/writing-a-simple-mvc-model-view-controller-app-in-vanilla-javascript-u65i34lx by Eleazar Meza, 2020.
+&nbsp; - The other is from https://www.taniarascia.com/javascript-mvc-todo-app/ by Tania Rasca, 2020.
 
-&nbsp; The other is from https://www.taniarascia.com/javascript-mvc-todo-app/ by Tania Rasca, 2020.
+I found both piece to be inspiring and have greatfully impacted my knowledge which I am greatful for. Thank you Eleazar Meza and Tania Rasca.
 
-I found both piece to be inspiring and have greatfully contributed to my knowledge which I am greatful for. Thank you Eleazar Meza and Tania Rasca.
+I'm pretty sure there are various ways of programming paradigm, framework, or techniques that could address a program scalability, maintainability, and alternative paradigm for JavaScript.
+You are certainly free to explore and use those as you like. However if you have certain conditions as I had where:
+- You can't use frameworks.
+- You can only use a browser.
+- The project you are building is a web app that lives in the client.
+- You got a lot of constraints but HTML, CSS, and JavaScript ain't them.
+- You prefer MVC which is scalable and maintainbale for the long term.
 
-However those piece of information are from from ideal to what I was looking for, and have found my self having a lot of document.getElement by ID on two pieces of MVC having duplicate 
-document.getElementByID() everywhere and doesn't really specify if what I as edditing was a label, button, window/div, and thought to my self that there has to be another way!... 
-I had to stare long and hard at the code yet again.
 
-My conclusion lead me to MVVC. I could've gone and made my project using other frameworks like react but I was constrained in the evironment where project will live and run poses an issue
-when it comes to using framerworks. 
+#Getting Started with MVVC
+I first got into MVVC because 
 
-Before getting started lets wrap around a few concepts before delving in to the MVVC concept:
 
 #Naming conventions and how the folder is structured.
-
 Naming conventions are a big part in organising code. Hence why I made sure that I have this tree
-Java
+<pre>
+Project Folder
 │   index.html
 │   README.md
 │
@@ -43,15 +42,7 @@ Java
                 UserSignupController.js
                 UserSignupModel.js
                 UserSignUpView.js
-
-The very top of our folder contains the index.html file and at the bottom are assets where a lot of the interesting things happen for the website.
-
-Inside the assets folder we have UIIndex.js file which contains the UIIndex class. 
-
-    Tip: The naming convention goes as follows U = User, I = Interface, followed by the name of the file that it's interfacing with. 
-
-It's  always going to be associated and is always coupled to the Index.html due to how it's always referencing document.getElementById('').
-
+</pre>
 
 
 #States of document.getElementByID 
