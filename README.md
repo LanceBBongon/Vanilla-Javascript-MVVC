@@ -16,34 +16,33 @@ You are certainly free to explore and use those as you like. However if you have
 - The project you are building is a web app that lives in the client.
 - You got a lot of constraints but HTML, CSS, and JavaScript ain't them.
 - You prefer MVC which is scalable and maintainbale for the long term.
+- You are restricted by administrative previledges.
 
 
-#Getting Started with MVVC
-I first got into MVVC because 
+#Set-up and naming conventions, and getting organised.
+
+The whole reason of a programming paradigm such MVC is to ensure that we got a project that can be maintained and scaled.
+
+##Creating the project. 
+To create the project, several folders need to be created. 
+
+- Step 1) Create a folder that will contain the project's files.
+
+- Step 2) Inside the folder you have created, create the following folders.
+&nbsp; - applet folder ~ this folder will contain all the features of the program. This is where a lot of the MVC stuff happens.
+&nbsp; - libs folder ~ this folder will contain all external libraries. (i.e Bootstrap)
+&nbsp; - css folder
+
+- Step 3) Inside the project folder create the following files.
+&nbsp; - index.html
 
 
-#Naming conventions and how the folder is structured.
-Naming conventions are a big part in organising code. Hence why I made sure that I have this tree
 <pre>
-Project Folder
-│   index.html
-│   README.md
-│
-└───assets
-    │   UIIndex.js
-    │
-    └───applet
-        ├───UserLogin
-        │       UserLoginController.js
-        │       UserLoginModel.js
-        │       UserLoginView.js
-        │
-        └───UserSignUp
-                UserSignupController.js
-                UserSignupModel.js
-                UserSignUpView.js
+
 </pre>
 
+
+Before getting started. 
 
 #States of document.getElementByID 
 
