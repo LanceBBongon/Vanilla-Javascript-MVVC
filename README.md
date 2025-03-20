@@ -5,6 +5,7 @@ I heard that javascript doesn't have a lot of scalability.
 I remember and came across MVC and that can organise the code into a managable chunk leading me to two articles.
 
 &nbsp; - One is from: https://hackernoon.com/writing-a-simple-mvc-model-view-controller-app-in-vanilla-javascript-u65i34lx by Eleazar Meza, 2020.
+
 &nbsp; - The other is from https://www.taniarascia.com/javascript-mvc-todo-app/ by Tania Rasca, 2020.
 
 I found both piece to be inspiring and have greatfully impacted my knowledge which I am greatful for. Thank you Eleazar Meza and Tania Rasca.
@@ -22,19 +23,20 @@ You are certainly free to explore and use those as you like. However if you have
 #Set-up and naming conventions, and getting organised.
 
 The whole reason of a programming paradigm such MVC is to ensure that we got a project that can be maintained and scaled.
+So, getting organised is the first step in order to get the project off the ground. 
 
-##Creating the project. 
+##Creating the project's initial files and folder.
 To create the project, several folders need to be created. 
 
-- Step 1) Create a folder that will contain the project's files.
+- Step 1) Create a folder that will contain all the project's files, and folder.
 
-- Step 2) Inside the folder you have created, create the following folders.
-&nbsp; - applet folder ~ this folder will contain all the features of the program. This is where a lot of the MVC stuff happens.
-&nbsp; - libs folder ~ this folder will contain all external libraries. (i.e Bootstrap)
-&nbsp; - css folder
+- Step 2) Inside the folder you have created, create the following folders:
+    - applet ~ this folder will contain all the features of the program. This is where a lot of the MVC stuff happens.
+    - libs ~ this folder will contain all external libraries. (i.e Bootstrap)
+    - css folder ~ this folder contains all the CSS files. 
 
 - Step 3) Inside the project folder create the following files.
-&nbsp; - index.html
+    - index.html
 
 
 <pre>
