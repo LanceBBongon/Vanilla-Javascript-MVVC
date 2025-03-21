@@ -15,9 +15,10 @@ You are certainly free to explore and use those as you like. However if you have
 - You can't use frameworks.
 - You can only use a browser.
 - The project you are building is a web app that lives in the client.
-- You got a lot of constraints but HTML, CSS, and JavaScript ain't them.
-- You prefer MVC which is scalable and maintainbale for the long term.
 - You are restricted by administrative previledges.
+- You got a lot of constraints but HTML, CSS, and JavaScript ain't them.
+- You prefer MVC which is scalable and maintainbale for the long term viability of the program.
+
 
 
 #Set-up and naming conventions, and getting organised.
@@ -31,7 +32,7 @@ To create the project, several folders need to be created.
 - Step 1) Create a folder that will contain all the project's files, and folder.
 
 - Step 2) Inside the folder you have created, create the following folders:
-    - applet ~ this folder will contain all the features of the program. This is where a lot of the MVC stuff happens.
+    - applet ~ this folder will contain all the features of the program. This is where a lot of the MVVC stuff happens.
     - libs ~ this folder will contain all external libraries. (i.e Bootstrap)
     - css folder ~ this folder contains all the CSS files. 
 
@@ -40,6 +41,8 @@ To create the project, several folders need to be created.
 
 
 <pre>
+    
+    
 
 </pre>
 
