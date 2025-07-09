@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
 
-    <input type="date" id="element1">
-    <div id="element2">
-        <input type="date" id="element1">
+    <div id="center_stage">
+        <form>
+            <fieldset class="title_container">
+                 <legend>To-do App</legend><!-- Title of the Applications-->
+
+                 
+            </fieldset>
+            
+            <fieldset id="todo_control_container" class="flex_row"> <!-- Controls of the Applications -->
+                <legend>To-do App</legend>
+                <input type="text" name="" id="" class="user_text">
+                <input type="button" value="Add" class="user_button">
+            </fieldset>
+            <fieldset id="todo_list_content_container">
+                <div>
+
+                </div>
+            </fieldset>
+        </form>
     </div>
 
-    
-    <div id="element3"></div>
-    <div id="element4"></div>
-    <div id="element5"></div>
-    <div id="element6"></div>
-
-
-    <script src="./assets/UIHandler.js"></script>
+    <script src="./applet/app.js"></script>
 </body>
+
 </html>
