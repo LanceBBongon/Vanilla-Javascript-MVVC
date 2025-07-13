@@ -138,6 +138,11 @@ table {
 
 /* End of CSS Reset */
 
+input {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 /* */
 #center_stage {
     position: absolute;
@@ -151,44 +156,99 @@ table {
     box-sizing: border-box;
 }
 
-/* Container for input and button */
-#todo_control_container {
+/* Text input field */
+.user_text {
+    flex: 0 0 95%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 0px 0px 5px;
+    width: auto;
+}
+
+/* Button next to text field */
+.user_button {
+    flex: 0 0 5%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    min-width: 50px;
+    width: auto;
+    height: auto;
+    /* Ensure button is usable even on small screens */
+}
+
+.todo_container {
     display: flex;
     flex-direction: row;
     border: 2px solid black;
     border-radius: 10px;
     box-sizing: border-box;
     width: 100%;
-    /* Ensure it spans full width of parent */
-    gap: 8px;
-    /* Optional spacing between items */
-    margin-top: 10px;
-    /* Optional spacing from above */
+    gap: 2px;
+    margin-top: 1%;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
 }
 
-/* Text input field */
-.user_text {
-    flex: 1 1 95%;
-    box-sizing: border-box;
-    padding: 0px 0px 5px;
+
+.todo_list_control {
+  display: flex;
+  width: 100%;           /* Use full width of parent */
+  border-radius: 25px;
+  box-sizing: border-box;
+      /* Ensures clean radius and layout */
 }
 
-/* Button next to text field */
-.user_button {
-    flex: 0 0 5%;
-    box-sizing: border-box;
-    min-width: 50px;
-    /* Ensure button is usable even on small screens */
-}
-
-.title_container {
+.todo_list_control>input:first-child {
+    border-radius: 10px 0px 0px 10px;
     width: 100%;
-    box-sizing: border-box;
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 25px;
 }
 
+.todo_list_control>input:first-child:active {
+    background-color: cadetblue;
+}
+
+.todo_list_control>input:nth-of-type(2) {
+    border-radius: 0px 10px 10px 0px;   
+    width: 100%;
+}
+
+.todo_list_control>input:nth-of-type(2):active {
+    background-color: cadetblue;
+}
+
+._container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  ._container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  ._container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  ._container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  ._container {
+    max-width: 1140px;
+  }
+}
+
+.confirm:hover {
+    background-color: lightgreen;
+}
+
+.confirm:active {
+    background-color: cadetblue;
+}
