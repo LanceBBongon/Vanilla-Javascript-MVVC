@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div id="center_stage" class="bg-dark text-white">
+    <div id="center_stage" class="bg-dark text-white container">
 
         <form>
             <fieldset class="container">
@@ -39,8 +39,8 @@
                     <!-- Controls of the Applications -->
                     <div class="input-group mb-3">
                         <!-- Todo input: text -->
-                        <input id="todo-input-text" type="text" class="form-control" placeholder="Enter A Task" aria-label="Enter A Task"
-                            aria-describedby="button-addon2">
+                        <input id="todo-input-text" type="text" class="form-control" placeholder="Enter A Task"
+                            aria-label="Enter A Task" aria-describedby="button-addon2" value="100">
 
                         <!-- Todo input: button -->
                         <input id="todo-input-button" type="button" value="Add Task" class="btn btn-primary">
@@ -74,11 +74,18 @@
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 
 
-    <script src="./applet/UIView/TodoUIView.js"></script>
-    <script src="./applet/Controller/TodoController.js"></script>
+
+    <script src="./libs/globals.js"></script> <!-- Global Functions -->
+    <script src="./libs/UIHandler.js"></script> <!-- UI Handler for managing UI elements and values -->
 
 
-    <script src="./applet/app.js"></script>
+
+    <script src="./app/UIView/CreateTodoRefference.js"></script>
+
+    <script src="./app/UIView/RefferrencesUI.js"></script>
+    <script src="./app/Controller/TodoController.js"></script>
+
+    <script src="./app/main.js"></script>
 </body>
 
 </html>
