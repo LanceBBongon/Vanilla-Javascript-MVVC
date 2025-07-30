@@ -1,18 +1,17 @@
-//Sort out all the buttons here. You can sort it by feature or by html file.
-// const ICreateTodoTask_RefferenceUI = new CreateTodo_RefferenceUI();
 
 
+const configElements = {
+    todoInput: 'todo-input',
+    todoList: 'todo-list',
+    todoCount: 'todo-count'
+};
 
-// For future reference, you can use this to create a container for your UI views.
-// When the UI references become larger, or when you need to organise them better, you can use a container object below.
-// const uiview = {
-//     todo: {
-//         create: new CreateToDoTaskUIView(),
-//         edit: new EditToDoTaskUIView(),
-//         delete: new DeleteToDoTaskUIView(),
-//     },
-//     user: {
-//         profile: new UserProfileUIView(),
-//         settings: new UserSettingsUIView(),
-//     },
-// };
+
+const valueKeys = ['todoInput', 'todoList', 'todoCount'];
+const globalFns = [sanitize_input];
+const perKeyFns = {
+    todoInput: [v => v.trim(), v => v.toUpperCase()],
+    todoList: [],
+    todoCount: []
+};
+const ICreateTodoTask = new UIReferenceManager(configElements, valueKeys, globalFns, perKeyFns);
